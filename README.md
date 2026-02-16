@@ -228,6 +228,19 @@ pip install -e ".[dev]"
 pytest tests/ -v
 ```
 
+## Background & Design Journey
+
+Curious about the design decisions behind this project? Read the full story on how the SQLite checkpoint saver was adapted into a production-grade Cosmos DB implementation:
+
+📖 **[From SQLite to Cosmos DB: How I Built a Production-Grade Checkpoint Saver for LangGraph](https://github.com/LangModule/checkpoint-cosmos/wiki/From-SQLite-to-Cosmos-DB)**
+
+The article covers:
+
+- Why a Cosmos DB checkpoint saver was needed
+- How the SQLite schema maps to Cosmos DB documents
+- Key adaptations: tip document pattern, transactional batches, dual-partition strategy, and more
+- Side-by-side comparison of the two implementations
+
 ## Acknowledgments
 
 This project is based on [langgraph-checkpoint-sqlite](https://github.com/langchain-ai/langgraph/tree/main/libs/checkpoint-sqlite) from the LangChain team. The core architecture, serialization patterns, and checkpoint management logic were adapted for Azure Cosmos DB.
